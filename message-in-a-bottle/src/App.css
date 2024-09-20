@@ -1,0 +1,71 @@
+body {
+  background-color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "SUSE", sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  align-items: center;
+}
+
+.container {
+  min-width: 400px;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.form label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.form input {
+  min-width: 20rem;
+  min-height: 1.5em;
+}
+
+.form textarea {
+  min-width: 20rem;
+  min-height: 10rem;
+}
+
+.message {
+  font-size: 18px;
+  margin-bottom: 2em;
+}
+
+.botao {
+  background-color: #f1f1f1; /* Fundo cinza */
+  border: 2px solid #a1a1a1; /* Borda branca */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-weight: bold; /* Texto em negrito */
+  font-size: 16px; /* Tamanho da fonte */
+  border-radius: 5px; /* Bordas arredondadas */
+  cursor: pointer; /* Muda o cursor para pointer */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave */
+  font-family: "SUSE", sans-serif;
+}
+
+.botao:hover {
+  background-color: #c0c0c0; /* Fundo branco ao passar o mouse */
+}
+
+hr {
+  display: block;
+  width: 80%;
+}
