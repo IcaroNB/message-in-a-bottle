@@ -47,22 +47,24 @@ h1 {
 .message {
   font-size: 18px;
   margin-bottom: 2em;
+  display: block;
+  align-items: start;
 }
 
 .botao {
-  background-color: #f1f1f1; /* Fundo cinza */
-  border: 2px solid #a1a1a1; /* Borda branca */
-  padding: 10px 20px; /* Espaçamento interno */
-  font-weight: bold; /* Texto em negrito */
-  font-size: 16px; /* Tamanho da fonte */
-  border-radius: 5px; /* Bordas arredondadas */
-  cursor: pointer; /* Muda o cursor para pointer */
-  transition: background-color 0.3s, color 0.3s; /* Transição suave */
+  background-color: #f1f1f1;
+  border: 2px solid #a1a1a1;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
   font-family: "SUSE", sans-serif;
 }
 
 .botao:hover {
-  background-color: #c0c0c0; /* Fundo branco ao passar o mouse */
+  background-color: #c0c0c0;
 }
 
 hr {

@@ -6,10 +6,6 @@ function App() {
   const [message, setMessage] = useState("");
   const [posts, setPosts] = useState([]);
 
-  const generateId = () => {
-    return Math.random().toString(36);
-  };
-
   const inputPost = (email, message) => {
     const date = new Date();
     const dateOfPost = `${date.getDate()}/${
@@ -17,13 +13,13 @@ function App() {
     }/${date.getFullYear()} - ${date.getHours()}:${date.getMinutes()}`;
 
     const newPost = {
-      id: generateId(),
+      id: Math.floor(Math.random() * 1000000),
       email,
       message,
       dateOfPost,
     };
 
-    const updatedPosts = [...posts, newPost];
+    const updatedPosts = [newPost, ...posts];
     setPosts(updatedPosts);
 
     localStorage.setItem("mib-lib", JSON.stringify(updatedPosts));
@@ -79,7 +75,7 @@ function App() {
           <button className="botao">Enviar mensagem</button>
         </form>
         <hr />
-        <div className="messages">
+        <div>
           {posts.length > 0 ? (
             posts.map((post) => (
               <div key={post.id} className="message">
@@ -88,12 +84,14 @@ function App() {
                 </p>
                 <p>{post.message}</p>
                 <p>{post.dateOfPost}</p>
-                <button
-                  className="botao btnRemove"
-                  onClick={() => removePost(post.id)}
-                >
-                  X
-                </button>
+                <div>
+                  <button
+                    className="botao btnRemove"
+                    onClick={() => removePost(post.id)}
+                  >
+                    X
+                  </button>
+                </div>
               </div>
             ))
           ) : (
